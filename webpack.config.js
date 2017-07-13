@@ -1,11 +1,16 @@
 var webpack = require('webpack');
 var url = require('url');
+var path = require('path');
+var CleanWebpackPlugin = require('clean-webpack-plugin');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: "./src/entry.js",
+  entry: {
+    app: "./src/app.js"
+  },
   output: {
-    filename: "app.js",
-    publicPath: "/"
+    filename: (process.env.NODE_ENV == "production" ? "[name].[chunkhash].js" : "[name].js"),
+    path: path.resolve(__dirname, 'dist')
   },
   module: {
     loaders: [
@@ -19,6 +24,13 @@ module.exports = {
       }
    ]
   },
+  plugins: [
+    new CleanWebpackPlugin(['dist']),
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: 'src/index.html'
+    })
+  ],
   devServer: {
     contentBase: '.',
     // Set up a local proxy for dashboard data, so we don't need to deal with CORS, preflight requests, etc
