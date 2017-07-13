@@ -2,8 +2,9 @@
   "presets": [
     ["env", {
       "targets": {
-        "browsers": ["last 2 versions"]
-      }
+        "browsers": ["last 1 version"]
+      },
+      "useBuiltIns": true
     }],
     "stage-0",
     "react"

@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 import Trial from './trial';
 import colors from './colors';
 
-// window.fetch for older browsers
-import 'isomorphic-fetch';
+import 'babel-polyfill';
 
 class TrialsLayout extends React.Component {
   static propTypes = {
