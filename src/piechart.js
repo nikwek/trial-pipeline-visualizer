@@ -4,7 +4,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-class PieChart extends React.Component {
+class PieChart extends React.PureComponent {
   static propTypes = {
     data: PropTypes.arrayOf(PropTypes.shape({
       value: PropTypes.number,

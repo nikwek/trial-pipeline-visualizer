@@ -5,7 +5,7 @@ import PieChart from './piechart';
 import colors from './colors';
 import Color from 'color';
 
-class Trial extends React.Component {
+class Trial extends React.PureComponent {
   static propTypes = {
     trial: PropTypes.shape({
       name: PropTypes.string,
@@ -55,7 +55,7 @@ class Trial extends React.Component {
     if (this.props.trial.state == 'active') {
       return isActive ? colors.gold : colors.darkGold
     } else if (this.props.trial.state == 'trial_expired') {
-      return isActive ? Color(activeColor).darken(0.75).hexString() : colors.inactive;
+      return isActive ? Color(activeColor).darken(0.75).string() : colors.inactive;
     } else {
       return isActive ? activeColor : colors.inactive;
     }
