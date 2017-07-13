@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Trial from './trial';
 import colors from './colors';
 
@@ -7,8 +8,8 @@ import 'isomorphic-fetch';
 
 class TrialsLayout extends React.Component {
   static propTypes = {
-    accountsUrl: React.PropTypes.string.isRequired,
-    pollSeconds: React.PropTypes.number.isRequired
+    accountsUrl: PropTypes.string.isRequired,
+    pollSeconds: PropTypes.number.isRequired
   };
 
   constructor(props) {

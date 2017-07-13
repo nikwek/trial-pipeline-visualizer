@@ -2,16 +2,17 @@
 // https://github.com/cedricdelpoux/react-svg-piechart
 
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class PieChart extends React.Component {
   static propTypes = {
-    data: React.PropTypes.arrayOf(React.PropTypes.shape({
-      value: React.PropTypes.number,
-      color: React.PropTypes.string,
+    data: PropTypes.arrayOf(PropTypes.shape({
+      value: PropTypes.number,
+      color: PropTypes.string,
     })),
-    sectorStrokeColor: React.PropTypes.string,
-    sectorStrokeWidth: React.PropTypes.number,
-    viewBoxWidth: React.PropTypes.number
+    sectorStrokeColor: PropTypes.string,
+    sectorStrokeWidth: PropTypes.number,
+    viewBoxWidth: PropTypes.number
   };
 
   static defaultProps = {

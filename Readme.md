@@ -5,13 +5,13 @@ The internal monitor we display at [Buildkite](https://buildkite.com/) HQ to mon
 To start it up locally (in a webpack dev server):
 
 ```bash
-npm install && npm start
+yarn && yarn start
 ```
 
 This will use data from [accounts.json](accounts.json). If you want to point it to a server-based JSON endpoint (using the webpack dev server http proxy), set the following environment variables:
 
 ```bash
-env TRIAL_DASHBOARD_ENDPOINT='http://myserver.com/endpoint' TRIAL_DASHBOARD_SECRET='xyz' npm start
+env TRIAL_DASHBOARD_ENDPOINT='http://myserver.com/endpoint' TRIAL_DASHBOARD_SECRET='xyz' yarn start
 ```
 
 ## Setup as a system service

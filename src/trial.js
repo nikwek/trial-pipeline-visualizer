@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import PieChart from './piechart';
 import colors from './colors';
@@ -6,16 +7,16 @@ import Color from 'color';
 
 class Trial extends React.Component {
   static propTypes = {
-    trial: React.PropTypes.shape({
-      name: React.PropTypes.string,
-      state: React.PropTypes.string,
-      slug: React.PropTypes.string,
-      age: React.PropTypes.number,
-      agents_count: React.PropTypes.number,
-      pipelines_count: React.PropTypes.number,
-      invites_count: React.PropTypes.number,
-      builds_count: React.PropTypes.number,
-      passed_builds_count: React.PropTypes.number,
+    trial: PropTypes.shape({
+      name: PropTypes.string,
+      state: PropTypes.string,
+      slug: PropTypes.string,
+      age: PropTypes.number,
+      agents_count: PropTypes.number,
+      pipelines_count: PropTypes.number,
+      invites_count: PropTypes.number,
+      builds_count: PropTypes.number,
+      passed_builds_count: PropTypes.number,
     }).isRequired
   };
 
