@@ -74,10 +74,12 @@ h1 {
   background-color: #000;
   border-radius: 50%;
   color: #fff;
-  z-index: 1;
+  z-index: 2;
 }
 
-.Trial__name span {
+.Trial__name a:link, .Trial__name a:visited, .Trial__name a:active {
+  color: #fff;
+  text-decoration: none;
   width: 90%;
   overflow: hidden;
   text-wrap: nowrap;
@@ -87,6 +89,7 @@ h1 {
 .Trial--state-active .Trial__name {
   color: #FFCF00;
 }
+
 .Trial--state-trial_expired .Trial__name {
   color: #777;
 }
