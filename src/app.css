@@ -1,7 +1,7 @@
 :root {
   background: #000;
   color: white;
-  font: 14px "SF Compact Text", "SF UI Text";
+  font: 14px "SF Compact", -apple-system, BlinkMacSystemFont;
   line-height: 1;
   padding: 20px;
   margin: 0;
