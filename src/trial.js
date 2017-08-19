@@ -36,7 +36,7 @@ class Trial extends React.PureComponent {
             sectorStrokeWidth={1} />
         </div>
         <div className="Trial__name">
-          <span>{this.props.trial.name}</span>
+          <a href={"https://buildkite.com/admin/accounts/"+this.props.trial.slug}>{this.props.trial.name}</a>
         </div>
         <div className="Trial__age" style={{ color: this._idColor() }}>{this.props.trial.age}d</div>
       </div>
